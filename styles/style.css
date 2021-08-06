@@ -1,11 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+*::-webkit-scrollbar{
+  width:10px;
+}
+*::-webkit-scrollbar-track{
+  background: rgb(20, 20, 20);
+}
+*::-webkit-scrollbar-thumb{
+  background:rgb(154, 75, 228) ;
+  border-radius: 10px;
+}
+
+html{
+  font-size: 16px;
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+  color: white;
+  background-color: rgb(20, 20, 20);
+}
+
+a{
+  text-decoration: none;
+  color:black
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.cards{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: rgb(154, 75, 228);
+  color: black;
+  justify-content: space-between;
+}
+
+.cards img{
+  border-radius: 10px 10px 0 0;
+
+}
+
+.cards .description{
+  width: 300px;
+  padding: 1.8rem;
+}
+
+.cards .description p{
+  padding: 0.8rem 0;
+}
+
+.btn{
+  font-size: 20px;
+  border:2px solid black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btn:hover{
+  background-color: rgb(20, 20, 20);
+  color: rgb(154, 75, 228);
+}
+
+@media all and (max-width:991px){
+  .container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width:700px){
+  .container{
+    grid-template-columns: 1fr;
+  }
 }
